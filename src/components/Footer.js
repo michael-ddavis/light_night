@@ -1,11 +1,12 @@
 const navigation = {
     main: [
-      { name: 'About', href: '#' },
-      { name: 'Beliefs', href: '#' },
-      { name: 'Our Team', href: '#' },
-      { name: 'Our Partners', href: '#' },
-      { name: 'Encounters', href: '#' },
-      { name: 'Giving', href: '#' },
+      { name: 'About', href: '/about' },
+      { name: 'Our Vision', href: '/vision' },
+      { name: 'Beliefs', href: '/beliefs' },
+      { name: 'Our Team', href: '/team' },
+      // { name: 'Our Partners', href: '/partners' },
+      { name: 'Encounters', href: '/encounters' },
+      { name: 'Giving', href: '/giving' },
     ],
     social: [
       {
@@ -50,7 +51,7 @@ const navigation = {
 const Footer = () => {
     return ( 
         <footer className="bg-white">
-        <div className="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto py-16 px-4 overflow-hidden sm:px-6 lg:px-8">
           <nav className="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
             {navigation.main.map((item) => (
               <div key={item.name} className="px-5 py-2">

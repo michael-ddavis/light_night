@@ -1,10 +1,28 @@
+const colors = require('tailwindcss/colors')
+
+
 module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    colors: {
+      transparent: 'transparent',
+      current: 'currentColor',
+      black: colors.black,
+      white: colors.white,
+      gray: colors.trueGray,
+      indigo: colors.indigo,
+      red: colors.rose,
+      yellow: colors.amber,
+      orange: colors.orange,
+      green: colors.green,
+      blue: colors.blue,
+      blueGray: colors.blueGray,
+      sky: colors.sky
+        },
     extend: {
       backgroundImage: theme => ({
-        'fall': "url('./images/fall.jpg')",
+        'hero': "url('./images/hero_image.jpg')",
         'passion': "url('./images/passion.jpg')"
        })
     },
@@ -15,5 +33,8 @@ module.exports = {
 
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/aspect-ratio'),
+  ],
 }

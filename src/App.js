@@ -1,12 +1,15 @@
-import './App.css';
 import {
   BrowserRouter as Router,
   Route,
   Switch,
 } from 'react-router-dom';
-import Home from './Home';
-import Beliefs from './Beliefs';
-import Events from './Events';
+import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
+import BeliefsPage from './pages/BeliefsPage';
+import VisionPage from './pages/VisionPage';
+import EncountersPage from './pages/EncountersPage';
+import GivingPage from './pages/GivingPage';
+import TeamPage from './pages/TeamPage';
 import ScrollToTop from './scrollToTop';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
@@ -19,15 +22,26 @@ function App() {
           <Navbar />
           <Switch>
             <Route exact path="/">
-              <Home />
+              <HomePage />
+            </Route>
+            <Route exact path="/about">
+              <AboutPage />
+            </Route>
+            <Route path="/vision">
+              <VisionPage />
             </Route>
             <Route path="/beliefs">
-              <Beliefs />
+              <BeliefsPage />
             </Route>
-            <Route path="/events">
-              <Events />
+            <Route path="/team">
+              <TeamPage />
             </Route>
-            <Route path="/giving"></Route>
+            <Route path="/encounters">
+              <EncountersPage />
+            </Route>
+            <Route path="/giving">
+              <GivingPage />
+            </Route>
           </Switch>
           <Footer />
         </div>
