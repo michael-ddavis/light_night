@@ -1,48 +1,42 @@
-import {
-  Popover,
-  Transition,
-  Dialog,
-} from '@headlessui/react';
-import { Fragment, useState } from 'react';
-import { MenuIcon, XIcon } from '@heroicons/react/outline';
-import { Link } from 'react-router-dom';
+import { Popover, Transition, Dialog } from "@headlessui/react";
+import { Fragment, useState } from "react";
+import { MenuIcon, XIcon } from "@heroicons/react/outline";
+import { Link } from "react-router-dom";
 
 const links = [
   {
-    name: 'About.',
+    name: "About.",
     description:
-      'Get a better understanding of where your traffic is coming from.',
-    href: '/about',
+      "Get a better understanding of where your traffic is coming from.",
+    href: "/about",
   },
   {
-    name: 'Our Vision.',
+    name: "Our Vision.",
     description:
-      'Get a better understanding of where your traffic is coming from.',
-    href: '/vision',
+      "Get a better understanding of where your traffic is coming from.",
+    href: "/vision",
   },
   {
-    name: 'Our Beliefs.',
+    name: "Our Beliefs.",
     description:
-      'Get a better understanding of where your traffic is coming from.',
-    href: '/beliefs',
+      "Get a better understanding of where your traffic is coming from.",
+    href: "/beliefs",
   },
   {
-    name: 'Our Team.',
+    name: "Our Team.",
     description:
-      'Get a better understanding of where your traffic is coming from.',
-    href: '/team',
+      "Get a better understanding of where your traffic is coming from.",
+    href: "/team",
   },
   {
-    name: 'Encounters.',
-    description:
-      'Speak directly to your customers in a more meaningful way.',
-    href: '/encounters',
+    name: "Encounters.",
+    description: "Speak directly to your customers in a more meaningful way.",
+    href: "/encounters",
   },
   {
-    name: 'GIVE.',
-    description:
-      "Your customers' data will be safe and secure.",
-    href: '/giving',
+    name: "GIVE.",
+    description: "Your customers' data will be safe and secure.",
+    href: "/giving",
   },
 ];
 
@@ -50,10 +44,10 @@ const Navbar = () => {
   const [open, setOpen] = useState(true);
 
   return (
-    <Popover className="relative bg-whiteshadow-sm lg:shadow-md">
+    <Popover className="bg-white lg:shadow-md sticky top-0 z-50">
       {({ open }) => (
         <>
-          <div className="flex justify-between sticky top-0 items-center px-4 py-6 sm:px-6 md:justify-start md:space-x-10">
+          <div className="flex justify-between items-center px-4 py-6 sm:px-6 md:justify-start md:space-x-10">
             <div className="flex justify-start lg:w-0 lg:flex-1">
               <Link to="/">
                 <h2 className="font-sans tracking-wider font-black text-xl md:text-2xl">
@@ -64,16 +58,10 @@ const Navbar = () => {
             <div className="-mr-2 -my-2 md:hidden">
               <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-black hover:text-blue-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                 <span className="sr-only">Open menu</span>
-                <MenuIcon
-                  className="h-6 w-6"
-                  aria-hidden="true"
-                />
+                <MenuIcon className="h-6 w-6" aria-hidden="true" />
               </Popover.Button>
             </div>
-            <Popover.Group
-              as="nav"
-              className="hidden md:flex space-x-10"
-            >
+            <Popover.Group as="nav" className="hidden md:flex space-x-10">
               <Link
                 to="/about"
                 className="text-lg font-normal text-black hover:text-blue-700"
@@ -92,10 +80,7 @@ const Navbar = () => {
               >
                 Blog
               </Link>
-              <Link
-                to="/giving"
-                className="text-lg font-bold text-blue-600"
-              >
+              <Link to="/giving" className="text-lg font-bold text-blue-600">
                 GIVE
               </Link>
             </Popover.Group>
@@ -145,13 +130,8 @@ const Navbar = () => {
                             className="rounded-md text-black hover:text-black "
                             onClick={() => setOpen(false)}
                           >
-                            <span className="sr-only">
-                              Close panel
-                            </span>
-                            <XIcon
-                              className="h-8 w-8"
-                              aria-hidden="true"
-                            />
+                            <span className="sr-only">Close panel</span>
+                            <XIcon className="h-8 w-8" aria-hidden="true" />
                           </button>
                         </div>
                       </Transition.Child>

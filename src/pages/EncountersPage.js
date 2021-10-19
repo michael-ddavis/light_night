@@ -85,7 +85,7 @@ const EncountersPage = () => {
                       </p>
                     </div>
                     <Link
-                      to="/encounters"
+                      to="/encounter"
                       className="transition duration-150 ease-linear bg-transparent border border-blue-700 rounded-md 
                       shadow p-4 md:px-16 py-3 mt-8 inline-flex items-center font-light tracking-widest text-base md:text-2xl text-blue-700 
                     hover:bg-blue-700 hover:border-transparent hover:text-white"

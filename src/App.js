@@ -1,24 +1,21 @@
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-} from 'react-router-dom';
-import HomePage from './pages/HomePage';
-import AboutPage from './pages/AboutPage';
-import BeliefsPage from './pages/BeliefsPage';
-import VisionPage from './pages/VisionPage';
-import EncountersPage from './pages/EncountersPage';
-import GivingPage from './pages/GivingPage';
-import TeamPage from './pages/TeamPage';
-import ScrollToTop from './scrollToTop';
-import Footer from './components/Footer';
-import Navbar from './components/Navbar';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
+import BeliefsPage from "./pages/BeliefsPage";
+import VisionPage from "./pages/VisionPage";
+import EncountersPage from "./pages/EncountersPage";
+import GivingPage from "./pages/GivingPage";
+import TeamPage from "./pages/TeamPage";
+import ScrollToTop from "./scrollToTop";
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
+import EncounterDetailPage from "./pages/EncounterDetailPage";
 
 function App() {
   return (
     <Router>
       <ScrollToTop>
-        <div className="bg-white">
+        <div className="bg-white flex flex-col">
           <Navbar />
           <Switch>
             <Route exact path="/">
@@ -38,6 +35,9 @@ function App() {
             </Route>
             <Route path="/encounters">
               <EncountersPage />
+            </Route>
+            <Route path="/encounter">
+              <EncounterDetailPage />
             </Route>
             <Route path="/giving">
               <GivingPage />

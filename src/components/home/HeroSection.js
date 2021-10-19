@@ -1,23 +1,104 @@
-import { Link
- } from "react-router-dom";
+import { Link } from "react-router-dom";
+import image1 from "../../images/give.jpg";
+import image2 from "../../images/home_encounters.jpg";
+import image3 from "../../images/passion.jpg";
+import image4 from "../../images/giving.jpg";
+
 const HeroSection = () => {
+  function eventLogger(ev) {
+    // eslint-disable-next-line no-console
+    console.log(ev.type, ev.target);
+  }
+
   return (
-    <header
-      className="bg-top bg-fixed bg-no-repeat bg-cover h-screen bg-hero object-top relative"
-    >
-      <div
-        className="h-screen bg-opacity-40 bg-gray-900 flex items-center justify-center"
-      >
-        <div className="mx-2 text-center">
-          <h1 className="text-gray-100 font-extrabold text-4xl xs:text-5xl md:text-6xl">
-            Fall Worship Night <span className="text-blue-400">'21</span>
-          </h1> 
-          <Link to="/encounters" className="transition duration-150 ease-linear bg-transparent border border-white rounded-md 
-          shadow p-8 md:px-16 py-3 mt-8 inline-flex items-center font-light tracking-widest textbase md:text-2xl text-white 
-          hover:bg-white hover:border-transparent hover:text-blue-700">REGISTER</Link>        
+    <div className="pt-16 pb-80 sm:pt-24 sm:pb-40 lg:pt-40 lg:pb-48">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:static">
+        <div className="sm:max-w-lg">
+          <h1 className="text-4xl font font-extrabold tracking-tight text-gray-900 sm:text-6xl">
+            Summer styles are finally here
+          </h1>
+          <p className="mt-4 text-xl text-gray-500">
+            This year, our new summer collection will shelter you from the harsh
+            elements of a world that doesn't care if you live or die.
+          </p>
+        </div>
+        <div>
+          <div className="mt-10">
+            <div
+              aria-hidden="true"
+              className="pointer-events-none lg:absolute lg:inset-y-0 lg:max-w-7xl lg:mx-auto lg:w-full"
+            >
+              <div className="absolute transform sm:left-1/2 sm:top-0 sm:translate-x-8 lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-8">
+                <div className="flex items-center space-x-6 lg:space-x-8">
+                  <div className="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8">
+                    <div className="w-44 h-64 rounded-lg overflow-hidden sm:opacity-0 lg:opacity-100">
+                      <img
+                        src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-01.jpg"
+                        alt=""
+                        className="w-full h-full object-center object-cover"
+                      />
+                    </div>
+                    <div className="w-44 h-64 rounded-lg overflow-hidden">
+                      <img
+                        src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-02.jpg"
+                        alt=""
+                        className="w-full h-full object-center object-cover"
+                      />
+                    </div>
+                  </div>
+                  <div className="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8">
+                    <div className="w-44 h-64 rounded-lg overflow-hidden">
+                      <img
+                        src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-03.jpg"
+                        alt=""
+                        className="w-full h-full object-center object-cover"
+                      />
+                    </div>
+                    <div className="w-44 h-64 rounded-lg overflow-hidden">
+                      <img
+                        src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-04.jpg"
+                        alt=""
+                        className="w-full h-full object-center object-cover"
+                      />
+                    </div>
+                    <div className="w-44 h-64 rounded-lg overflow-hidden">
+                      <img
+                        src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-05.jpg"
+                        alt=""
+                        className="w-full h-full object-center object-cover"
+                      />
+                    </div>
+                  </div>
+                  <div className="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8">
+                    <div className="w-44 h-64 rounded-lg overflow-hidden">
+                      <img
+                        src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-06.jpg"
+                        alt=""
+                        className="w-full h-full object-center object-cover"
+                      />
+                    </div>
+                    <div className="w-44 h-64 rounded-lg overflow-hidden">
+                      <img
+                        src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-07.jpg"
+                        alt=""
+                        className="w-full h-full object-center object-cover"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <a
+              href="#"
+              className="inline-block text-center bg-indigo-600 border border-transparent rounded-md py-3 px-8 font-medium text-white hover:bg-indigo-700"
+            >
+              Shop Collection
+            </a>
+          </div>
         </div>
       </div>
-    </header>
+    </div>
   );
 };
 

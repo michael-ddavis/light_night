@@ -1,10 +1,10 @@
-import image from '../../images/home_encounters.jpg';
-import { Link } from 'react-router-dom';
+import image from "../../images/home_encounters.jpg";
+import { Link } from "react-router-dom";
 const EncountersSection = () => {
   return (
     <div className="bg-white">
       {/* Header */}
-      <div className="relative pb-32">
+      <div className="relative pb-12 sm:pb-16 md:pb-24 lg:pb-32">
         <div className="absolute inset-0">
           <img
             className="w-full h-full object-cover"
@@ -21,11 +21,17 @@ const EncountersSection = () => {
             Our Encounters.
           </h1>
           <p className="mt-6 max-w-lg text-left text-xl text-gray-300">
-            Not events, but encounters. Click to see what you can expect when you come.
+            Not events, but encounters. Click to see what you can expect when
+            you come.
           </p>
-          <Link to="/encounters" className="transition duration-150 ease-linear bg-transparent border border-white rounded-md 
+          <Link
+            to="/encounters"
+            className="transition duration-150 ease-linear bg-transparent border border-white rounded-md 
           shadow p-8 md:px-16 py-3 mt-8 inline-flex items-center font-light tracking-widest textbase md:text-2xl text-white 
-          hover:bg-white hover:border-transparent hover:text-blue-700">See Our Encounters</Link>     
+          hover:bg-white hover:border-transparent hover:text-blue-700"
+          >
+            See Our Encounters
+          </Link>
         </div>
       </div>
     </div>
