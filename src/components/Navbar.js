@@ -80,8 +80,8 @@ const Navbar = () => {
               >
                 Blog
               </Link>
-              <Link to="/giving" className="text-lg font-bold text-blue-600">
-                GIVE
+              <Link to="/giving" className="text-lg font-normal text-black">
+                Give
               </Link>
             </Popover.Group>
           </div>
@@ -89,7 +89,7 @@ const Navbar = () => {
           <Transition.Root show={open} as={Fragment}>
             <Dialog
               as="div"
-              className="fixed inset-0 overflow-hidden"
+              className="fixed inset-0 overflow-hidden z-40"
               onClose={setOpen}
             >
               <div className="absolute inset-0 overflow-hidden">
@@ -104,7 +104,7 @@ const Navbar = () => {
                 >
                   <Dialog.Overlay className="absolute inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
                 </Transition.Child>
-                <div className="fixed inset-y-0 z-50 right-0 max-w-full flex">
+                <div className="fixed inset-y-0 right-0 max-w-full flex">
                   <Transition.Child
                     as={Fragment}
                     enter="transform transition ease-in-out duration-500 sm:duration-700"
@@ -135,7 +135,7 @@ const Navbar = () => {
                           </button>
                         </div>
                       </Transition.Child>
-                      <div className="h-full flex flex-col py-6 bg-white shadow-xl overflow-y-scroll">
+                      <div className="h-full flex flex-col py-6 bg-black shadow-xl overflow-y-scroll">
                         <div className="px-4 sm:px-6">
                           <Dialog.Title className="text-lg font-medium text-center text-gray-900">
                             LIGHT NIGHT
@@ -149,7 +149,7 @@ const Navbar = () => {
                                 href={item.href}
                                 className="-m-3 py-6 flex items-center rounded-lg hover:bg-gray-50"
                               >
-                                <div className="ml-4 text-4xl font-bold text-black">
+                                <div className="ml-4 text-4xl font-bold text-white">
                                   {item.name}
                                 </div>
                               </a>

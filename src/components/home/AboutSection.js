@@ -51,7 +51,7 @@ const AboutSection = () => {
 
       {/* Overlapping cards */}
       <section
-        className="-mt-32 max-w-7xl mx-auto relative z-10 pb-16 md:pb-32 px-4 sm:px-6 lg:px-8"
+        className="-mt-32 max-w-7xl mx-auto relative pb-16 md:pb-32 px-4 sm:px-6 lg:px-8"
         aria-labelledby="contact-heading"
       >
         <div className="grid grid-cols-1 gap-y-4 lg:grid-cols-3 lg:gap-y-0 lg:gap-x-8">
