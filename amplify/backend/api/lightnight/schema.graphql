@@ -1,0 +1,42 @@
+type Comment @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  blogID: ID @index(name: "byBlog")
+  author: String!
+  dateTime: AWSDateTime
+  comment: String!
+  likes: Int
+}
+
+type Blog @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  title: String!
+  author: String!
+  tags: [String]
+  openingParagraph: String
+  scriptureOne: String
+  middleParagraph: String
+  scriptureTwo: String
+  lastParagraph: String
+  scriptureThree: String
+  fourthParagraph: String
+  Comments: [Comment] @hasMany(indexName: "byBlog", fields: ["id"])
+}
+
+type Team @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  name: String!
+  image: String!
+  role: String!
+  instagramLink: String
+}
+
+type WorshipNight @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  title: String!
+  date: String!
+  address: String!
+  location: String!
+  image: String!
+  googleMapLink: String
+  registrationLink: String
+}
