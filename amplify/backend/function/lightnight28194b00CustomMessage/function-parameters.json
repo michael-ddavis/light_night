@@ -1,0 +1,26 @@
+{
+  "trigger": true,
+  "modules": [
+    "verification-link"
+  ],
+  "parentResource": "lightnight28194b00",
+  "functionName": "lightnight28194b00CustomMessage",
+  "resourceName": "lightnight28194b00CustomMessage",
+  "parentStack": "auth",
+  "triggerEnvs": [
+    {
+      "key": "RESOURCENAME",
+      "value": "resourceName"
+    }
+  ],
+  "triggerDir": "/usr/local/lib/node_modules/@aws-amplify/cli/node_modules/@aws-amplify/amplify-category-auth/provider-utils/awscloudformation/triggers/CustomMessage",
+  "triggerTemplate": "CustomMessage.json.ejs",
+  "triggerEventPath": "CustomMessage.event.json",
+  "roleName": "lightnight28194b00CustomMessage",
+  "skipEdit": true,
+  "REDIRECTURL": "",
+  "EMAILSUBJECT": "Light Night Account Verification",
+  "EMAILMESSAGE": "We thank you for wanting to be a part of what God is doing in Light Night. Before we get started, we just need you to verify your email account with us. We want to make sure that everyone that comes to our site has the best and safest experience that we can give them.",
+  "RESOURCENAME": "resourceName",
+  "enableCors": false
+}
