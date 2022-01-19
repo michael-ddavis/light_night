@@ -9,7 +9,35 @@
       "UnauthRoleName": "amplify-amplifyaa27b273e01d4-staging-02906-unauthRole",
       "StackName": "amplify-amplifyaa27b273e01d4-staging-02906",
       "StackId": "arn:aws:cloudformation:us-east-1:897522065651:stack/amplify-amplifyaa27b273e01d4-staging-02906/cfcd9980-78be-11ec-ba70-0a22f5b12cc3",
-      "AmplifyAppId": "d15kernm3l6z8z"
+      "AmplifyAppId": "d15kernm3l6z8z",
+      "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-amplifyaa27b273e01d4-staging-02906-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json"
+    },
+    "categories": {
+      "auth": {
+        "lightnight28194b00": {}
+      },
+      "function": {
+        "lightnight28194b00DefineAuthChallenge": {
+          "deploymentBucketName": "amplify-amplifyaa27b273e01d4-staging-02906-deployment",
+          "s3Key": "amplify-builds/lightnight28194b00DefineAuthChallenge-6f532f4f2f6f49323849-build.zip"
+        },
+        "lightnight28194b00CreateAuthChallenge": {
+          "deploymentBucketName": "amplify-amplifyaa27b273e01d4-staging-02906-deployment",
+          "s3Key": "amplify-builds/lightnight28194b00CreateAuthChallenge-7a596b57496b4f333871-build.zip"
+        },
+        "lightnight28194b00VerifyAuthChallengeResponse": {
+          "RECAPTCHASECRET": "bRw*Y627PK!wE?Xa",
+          "deploymentBucketName": "amplify-amplifyaa27b273e01d4-staging-02906-deployment",
+          "s3Key": "amplify-builds/lightnight28194b00VerifyAuthChallengeResponse-70565462356f75546871-build.zip"
+        },
+        "lightnight28194b00CustomMessage": {
+          "REDIRECTURL": "",
+          "EMAILSUBJECT": "Light Night Account Verification",
+          "EMAILMESSAGE": "We thank you for wanting to be a part of what God is doing in Light Night. Before we get started, we just need you to verify your email account with us. We want to make sure that everyone that comes to our site has the best and safest experience that we can give them.",
+          "deploymentBucketName": "amplify-amplifyaa27b273e01d4-staging-02906-deployment",
+          "s3Key": "amplify-builds/lightnight28194b00CustomMessage-6e4f587670416a676463-build.zip"
+        }
+      }
     }
   }
 }
