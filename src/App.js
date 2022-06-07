@@ -1,4 +1,10 @@
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  useLocation,
+} from "react-router-dom";
+import { useLayoutEffect } from "react";
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import BeliefsPage from "./pages/BeliefsPage";
@@ -6,46 +12,37 @@ import VisionPage from "./pages/VisionPage";
 import EncountersPage from "./pages/EncountersPage";
 import GivingPage from "./pages/GivingPage";
 import TeamPage from "./pages/TeamPage";
-import ScrollToTop from "./scrollToTop";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import EncounterDetailPage from "./pages/EncounterDetailPage";
 
+const Wrapper = ({ children }) => {
+  const location = useLocation();
+  useLayoutEffect(() => {
+    document.documentElement.scrollTo(0, 0);
+  }, [location.pathname]);
+  return children;
+};
+
 function App() {
   return (
     <Router>
-      <ScrollToTop>
+      <Wrapper>
         <div className="bg-white flex flex-col">
           <Navbar />
-          <Switch>
-            <Route exact path="/">
-              <HomePage />
-            </Route>
-            <Route exact path="/about">
-              <AboutPage />
-            </Route>
-            <Route path="/vision">
-              <VisionPage />
-            </Route>
-            <Route path="/beliefs">
-              <BeliefsPage />
-            </Route>
-            <Route path="/team">
-              <TeamPage />
-            </Route>
-            <Route path="/encounters">
-              <EncountersPage />
-            </Route>
-            <Route path="/encounter">
-              <EncounterDetailPage />
-            </Route>
-            <Route path="/giving">
-              <GivingPage />
-            </Route>
-          </Switch>
+          <Routes>
+            <Route exact path="/" element={<HomePage />} />
+            <Route exact path="/about" element={<AboutPage />} />
+            <Route exact path="/vision" element={<VisionPage />} />
+            <Route exact path="/beliefs" element={<BeliefsPage />} />
+            <Route exact path="/team" element={<TeamPage />} />
+            <Route exact path="/encounters" element={<EncountersPage />} />
+            <Route exact path="/encounter" element={<EncounterDetailPage />} />
+            <Route exact path="/giving" element={<GivingPage />} />
+          </Routes>
           <Footer />
         </div>
-      </ScrollToTop>
+      </Wrapper>
     </Router>
   );
 }
