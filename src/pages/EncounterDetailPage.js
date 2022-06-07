@@ -1,18 +1,56 @@
-import summer from "../images/concert.jpg";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { useState, useEffect, useCallback } from "react";
+import { doc, getDoc } from "firebase/firestore/lite";
+import { db, storage } from "../firebase";
+import { ref, getDownloadURL } from "firebase/storage";
+
 const EncounterDetailPage = () => {
+  const [encounter, setEncounter] = useState({});
+  const location = useLocation();
+  const state = location.state;
+
+  const getEncounter = useCallback(async () => {
+    const docRef = doc(db, "encounters", state);
+    console.log("documentReference: ", docRef);
+    const docSnap = await getDoc(docRef);
+
+    if (docSnap.exists()) {
+      getDownloadURL(ref(storage, docSnap.data().detailImage))
+        .then((url) => {
+          setEncounter({
+            title: docSnap.data().title,
+            date: docSnap.data().date,
+            address: docSnap.data().address,
+            map: docSnap.data().map,
+            detailImage: url,
+            locationName: docSnap.data().locationName,
+          });
+        })
+        .catch((error) => {
+          console.log(error.message);
+        });
+    } else {
+      // doc.data() will be undefined in this case
+      console.log("No such document!");
+    }
+  }, [state]);
+
+  useEffect(() => {
+    getEncounter().catch(console.error);
+  }, [getEncounter]);
+
   return (
     <div className="container mx-auto py-12">
       <img
         className="h-96 w-full mx-auto object-cover px-2 sm:px-4 md:px-8 lg:px-44"
-        src={summer}
+        src={encounter.detailImage}
         alt=""
       />
       <div className="relative px-4 sm:px-6 lg:px-8">
         <div className="text-xl mx-auto max-w-prose">
           <h1>
             <span className="mt-2 block text-2xl md:text-5xl text-center leading-8 font-extrabold tracking-loose text-gray-900 py-4">
-              Worship Encounter '22 - Winter
+              {encounter.title}
             </span>
             <div className="flex flex-row space-x-2 mt-3">
               <svg
@@ -27,14 +65,15 @@ const EncounterDetailPage = () => {
                   clipRule="evenodd"
                 />
               </svg>
-              <p className="text-base">The Chapel</p>
-              <Link
-                to={{ pathname: "https://goo.gl/maps/2Qy7PVqV7f8NEsgj9" }}
+              <p className="text-base">{encounter.locationName}</p>
+              <a
+                href={encounter.map}
                 target="_blank"
+                rel="noreferrer"
                 className="text-red-400 underline text-base"
               >
                 Map It
-              </Link>
+              </a>
             </div>
             <div className="flex flex-row space-x-2 mt-2">
               <svg
@@ -49,7 +88,7 @@ const EncounterDetailPage = () => {
                   clipRule="evenodd"
                 />
               </svg>
-              <p className="text-base">Friday, February 21</p>
+              <p className="text-base">{encounter.date}</p>
             </div>
           </h1>
         </div>
@@ -80,6 +119,50 @@ const EncounterDetailPage = () => {
               REGISTER
             </Link>
           </div>
+        </div>
+      </div>
+      <div className="mt-6 grid grid-cols-2 gap-0.5 md:grid-cols-3 lg:mt-8">
+        <div className="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
+          <img
+            className="max-h-12"
+            src="https://tailwindui.com/img/logos/transistor-logo-gray-400.svg"
+            alt="Workcation"
+          />
+        </div>
+        <div className="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
+          <img
+            className="max-h-12"
+            src="https://tailwindui.com/img/logos/mirage-logo-gray-400.svg"
+            alt="Mirage"
+          />
+        </div>
+        <div className="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
+          <img
+            className="max-h-12"
+            src="https://tailwindui.com/img/logos/tuple-logo-gray-400.svg"
+            alt="Tuple"
+          />
+        </div>
+        <div className="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
+          <img
+            className="max-h-12"
+            src="https://tailwindui.com/img/logos/laravel-logo-gray-400.svg"
+            alt="Laravel"
+          />
+        </div>
+        <div className="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
+          <img
+            className="max-h-12"
+            src="https://tailwindui.com/img/logos/statickit-logo-gray-400.svg"
+            alt="StaticKit"
+          />
+        </div>
+        <div className="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
+          <img
+            className="max-h-12"
+            src="https://tailwindui.com/img/logos/statamic-logo-gray-400.svg"
+            alt="Statamic"
+          />
         </div>
       </div>
     </div>
