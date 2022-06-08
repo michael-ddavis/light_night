@@ -11,7 +11,6 @@ const EncounterDetailPage = () => {
 
   const getEncounter = useCallback(async () => {
     const docRef = doc(db, "encounters", state);
-    console.log("documentReference: ", docRef);
     const docSnap = await getDoc(docRef);
 
     if (docSnap.exists()) {
@@ -34,6 +33,8 @@ const EncounterDetailPage = () => {
       console.log("No such document!");
     }
   }, [state]);
+
+  console.log(encounter);
 
   useEffect(() => {
     getEncounter().catch(console.error);
@@ -88,7 +89,9 @@ const EncounterDetailPage = () => {
                   clipRule="evenodd"
                 />
               </svg>
-              <p className="text-base">{encounter.date}</p>
+              <p className="text-base">
+                {encounter.date}
+              </p>
             </div>
           </h1>
         </div>
