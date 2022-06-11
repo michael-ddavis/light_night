@@ -1,6 +1,6 @@
-import visionImage from '../images/vision.png';
-import { Link } from 'react-router-dom';
-import { ArrowRightIcon } from '@heroicons/react/outline';
+import visionImage from "../images/vision.png";
+import { Link } from "react-router-dom";
+import { ArrowRightIcon } from "@heroicons/react/outline";
 
 const VisionPage = () => {
   return (
@@ -33,28 +33,24 @@ const VisionPage = () => {
       <div className="mt-8 px-8 md:px-0 prose prose-indigo prose-xl text-gray-500 mx-auto">
         <blockquote>
           <p>
-            3 Make every effort to keep the unity of the
-            Spirit through the bond of peace. 4 There is one
-            body and one Spirit, just as you were called to
-            one hope when you were called; 5 one Lord, one
-            faith, one baptism; 6 one God and Father of all,
-            who is over all and through all and in all.
+            3 Make every effort to keep the unity of the Spirit through the bond
+            of peace. 4 There is one body and one Spirit, just as you were
+            called to one hope when you were called; 5 one Lord, one faith, one
+            baptism; 6 one God and Father of all, who is over all and through
+            all and in all.
           </p>
         </blockquote>
 
         <p className="italic">- Ephesians 4:3-6</p>
         <p>
-          God can only do great and mighty things through a
-          people that is unified. Light Night is about
-          bringing people together to worship God in unity.
-          We want people to experience God in a fresh way.
-          God gave us the vision to begin hosting worship
-          nights and invite all who wanted to come and have
-          different churches in the city host us. This move
-          of God is not meant to be contained to one church,
-          denomination or age group but is meant to spread
-          and pull the church of Christ together. We’re here
-          to pursue Jesus and push unity in the body.
+          God can only do great and mighty things through a people that is
+          unified. Light Night is about bringing people together to worship God
+          in unity. We want people to experience God in a fresh way. God gave us
+          the vision to begin hosting worship nights and invite all who wanted
+          to come and have different churches in the city host us. This move of
+          God is not meant to be contained to just the church, a denomination or
+          age group but is meant to spread and pull the church of Christ
+          together. We’re here to pursue Jesus and push unity in the body.
         </p>
       </div>
 
@@ -98,4 +94,3 @@ const VisionPage = () => {
 };
 
 export default VisionPage;
- 
