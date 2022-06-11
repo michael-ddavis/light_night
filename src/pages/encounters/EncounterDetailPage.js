@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect, useCallback } from "react";
 import { doc, getDoc } from "firebase/firestore/lite";
-import { db, storage } from "../firebase";
+import { db, storage } from "../../firebase";
 import { ref, getDownloadURL } from "firebase/storage";
 
 const EncounterDetailPage = () => {

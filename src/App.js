@@ -9,12 +9,14 @@ import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import BeliefsPage from "./pages/BeliefsPage";
 import VisionPage from "./pages/VisionPage";
-import EncountersPage from "./pages/EncountersPage";
+import EncountersPage from "./pages/encounters/EncountersPage";
 import GivingPage from "./pages/GivingPage";
 import TeamPage from "./pages/TeamPage";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
-import EncounterDetailPage from "./pages/EncounterDetailPage";
+import EncounterDetailPage from "./pages/encounters/EncounterDetailPage";
+import BlogsPage from "./pages/blog/BlogsPage";
+import BlogDetailPage from "./pages/blog/BlogDetailPage";
 
 const Wrapper = ({ children }) => {
   const location = useLocation();
@@ -38,6 +40,8 @@ function App() {
             <Route exact path="/team" element={<TeamPage />} />
             <Route exact path="/encounters" element={<EncountersPage />} />
             <Route exact path="/encounter" element={<EncounterDetailPage />} />
+            <Route exact path="/blogs" element={<BlogsPage />} />
+            <Route exact path="/blog-detail" element={<BlogDetailPage />} />
             <Route exact path="/giving" element={<GivingPage />} />
           </Routes>
           <Footer />
