@@ -1,8 +1,7 @@
 const colors = require("tailwindcss/colors");
 
 module.exports = {
-  purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
-  darkMode: false, // or 'media' or 'class'
+  content: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
   theme: {
     colors: {
       transparent: "transparent",
@@ -31,10 +30,6 @@ module.exports = {
         passion: "url('./images/passion.jpg')",
       }),
     },
-  },
-  variants: {
-    animation: ["responsive", "motion-safe", "motion-reduce"],
-    extend: {},
   },
   plugins: [
     require("@tailwindcss/typography"),

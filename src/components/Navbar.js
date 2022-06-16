@@ -107,10 +107,10 @@ const Navbar = () => {
                 <div className="fixed inset-y-0 right-0 max-w-full flex">
                   <Transition.Child
                     as={Fragment}
-                    enter="transform transition ease-in-out duration-500 sm:duration-700"
+                    enter=" transition ease-in-out duration-500 sm:duration-700"
                     enterFrom="translate-x-full"
                     enterTo="translate-x-0"
-                    leave="transform transition ease-in-out duration-500 sm:duration-700"
+                    leave=" transition ease-in-out duration-500 sm:duration-700"
                     leaveFrom="translate-x-0"
                     leaveTo="translate-x-full"
                   >

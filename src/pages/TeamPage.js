@@ -167,7 +167,7 @@ const TeamPage = () => {
               aria-hidden="true"
             >
               <svg
-                class="absolute bottom-full left-full transform translate-y-1/3 -translate-x-2/3 xl:bottom-auto xl:top-0 xl:translate-y-0"
+                class="absolute bottom-full left-full  translate-y-1/3 -translate-x-2/3 xl:bottom-auto xl:top-0 xl:translate-y-0"
                 width="404"
                 height="384"
                 fill="none"
@@ -200,7 +200,7 @@ const TeamPage = () => {
                 />
               </svg>
               <svg
-                class="absolute top-full transform -translate-y-1/3 -translate-x-1/3 xl:-translate-y-1/2"
+                class="absolute top-full -translate-y-1/3 -translate-x-1/3 xl:-translate-y-1/2"
                 width="404"
                 height="384"
                 fill="none"
